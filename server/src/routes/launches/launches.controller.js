@@ -26,6 +26,13 @@ function httpAddNewLaunch(req, res) {
     });
   }
 
+  const launch = {
+    mission,
+    rocket,
+    target,
+    launchDate,
+  };
+
   addNewLaunch(launch);
   res.status(201).json(getLatestLaunch());
 }
